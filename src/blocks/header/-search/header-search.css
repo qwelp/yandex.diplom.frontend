@@ -1,0 +1,20 @@
+@import "__input/header-search__input.css";
+@import "__label/header-search__label.css";
+
+.header-search {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    border-radius: 100px;
+}
+
+
+@media screen and (max-width: 710px) {
+    .header-search {
+        flex-direction: column;
+        background-color: transparent;
+        padding-left: 0;
+        border-radius: inherit;
+    }
+}

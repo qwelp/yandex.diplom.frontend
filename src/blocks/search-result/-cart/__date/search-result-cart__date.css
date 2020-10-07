@@ -1,0 +1,16 @@
+.search-result-cart__date {
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #B6BCBF;
+    margin: 0 24px 12px;
+}
+
+@media screen and (max-width: 1230px) {
+    .search-result-cart__date {
+        margin: 0 13px 14px;
+    }
+}

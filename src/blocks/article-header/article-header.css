@@ -1,0 +1,13 @@
+@import "-description/article-header-description.css";
+@import "-save/article-header-save.css";
+@import "-title/article-header-title.css";
+
+.article-header {
+    padding: 23px 0 38px;
+}
+
+@media screen and (max-width: 710px) {
+    .article-header {
+        padding: 0 16px 20px;
+    }
+}

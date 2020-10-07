@@ -1,0 +1,17 @@
+.title-main_header {
+    margin: 0 0 32px;
+}
+
+@media screen and (max-width: 1230px) {
+    .title-main_header {
+        width: 60%;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .title-main_header {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}

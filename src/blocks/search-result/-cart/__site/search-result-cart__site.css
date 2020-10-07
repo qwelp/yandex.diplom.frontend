@@ -1,0 +1,17 @@
+.search-result-cart__site {
+    color: #B6BCBF;
+    font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.4000000059604645px;
+    margin: auto 24px 24px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1230px) {
+    .search-result-cart__site {
+        margin: auto 13px 14px;
+    }
+}

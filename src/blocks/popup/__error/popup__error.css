@@ -1,0 +1,12 @@
+@import "_is_active/popup__error_is_active.css";
+
+.popup__error {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    margin: 5px 0 0;
+    display: none;
+}

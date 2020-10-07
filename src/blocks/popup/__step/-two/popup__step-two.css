@@ -1,0 +1,8 @@
+@import "__text/popup__step-two__text.css";
+@import "__button/popup__step-two__button.css";
+@import "_is_active/popup__step-two_is_active.css";
+
+.popup__step-two {
+    margin-bottom: 20px;
+    display: none;
+}

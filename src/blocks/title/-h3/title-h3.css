@@ -1,0 +1,16 @@
+.title-h3 {
+    font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1230px) {
+    .title-h3 {
+        font-size: 22px;
+        line-height: 24px;
+    }
+}

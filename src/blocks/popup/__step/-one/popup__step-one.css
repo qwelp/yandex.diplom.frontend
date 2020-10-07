@@ -1,0 +1,5 @@
+@import "_is_active/popup__step-one_is_active.css";
+
+.popup__step-one {
+    display: none;
+}

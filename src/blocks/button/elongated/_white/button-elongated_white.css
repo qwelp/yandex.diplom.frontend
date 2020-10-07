@@ -1,0 +1,7 @@
+@import "_header/_registration/button-elongated-white_header_registration.css";
+
+.button-elongated_white {
+    border: 1px solid currentColor;
+    color: white;
+    background-color: transparent;
+}

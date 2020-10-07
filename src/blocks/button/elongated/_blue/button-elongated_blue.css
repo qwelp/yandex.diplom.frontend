@@ -1,0 +1,7 @@
+@import "_header/_search/button-elongated-blue_header_search.css";
+
+.button-elongated_blue {
+    background-color: #2F71E5;
+    color: white;
+    border: 0;
+}

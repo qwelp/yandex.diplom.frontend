@@ -1,0 +1,10 @@
+.search-result.search-result_article-save {
+    padding-top: 62px;
+    padding-bottom: 3px;
+}
+
+@media screen and (max-width: 710px) {
+    .search-result.search-result_article-save {
+        padding-top: 30px;
+    }
+}

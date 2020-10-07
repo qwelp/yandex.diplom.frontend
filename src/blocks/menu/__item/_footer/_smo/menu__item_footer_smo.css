@@ -1,0 +1,9 @@
+.menu__item.menu__item_footer_smo:not(:last-child) {
+    margin-right: 25px;
+}
+
+@media screen and (max-width: 710px) {
+    .menu__item.menu__item_footer_smo:not(:last-child) {
+        margin-right: 25px;
+    }
+}

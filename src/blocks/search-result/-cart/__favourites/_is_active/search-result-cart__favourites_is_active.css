@@ -1,0 +1,5 @@
+.button-mark.search-result-cart__favourites_is_active .button-mark__icon:hover,
+.button-mark.search-result-cart__favourites_is_active .button-mark__icon {
+    stroke: #2F71E5;
+    fill: #2F71E5;
+}

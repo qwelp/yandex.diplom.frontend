@@ -1,0 +1,16 @@
+.author__title {
+    color: #1A1B22;
+    margin: 53px 0 23px 0;
+}
+
+@media screen and (max-width: 1230px) {
+    .author__title {
+        margin: 0 0 11px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .author__title {
+        margin: 0 0 15px;
+    }
+}
