@@ -66,6 +66,7 @@ import "./main.css";
             ) {
                 autForm.classList.remove('popup_is_active');
                 regForm.classList.remove('popup_is_active');
+                body.classList.toggle('overflow-hidden');
                 mobileButtonMenuToggle.classList.remove('mobile-menu-toggle_is_active');
             }
         });
