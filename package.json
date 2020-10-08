@@ -1,6 +1,6 @@
 {
   "name": "diplom",
-  "homepage": "https://qwelp.github.io/webpack_lesson/",
+  "homepage": "https://qwelp.github.io/yandex.diplom.frontend/",
   "version": "0.0.1",
   "description": "Дипломная работа. Верстка",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "deploy_gh_pages": "cross-env NODE_ENV=production gh-pages -d dist",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch"
   },
-  "author": "",
+  "author": "Бун Владимир",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.10.4",

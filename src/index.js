@@ -65,7 +65,7 @@ import "./main.css";
                 || target.closest('.popup__close')
             ) {
                 autForm.classList.remove('popup_is_active');
-                regFormpopup__close.classList.remove('popup_is_active');
+                regForm.classList.remove('popup_is_active');
                 mobileButtonMenuToggle.classList.remove('mobile-menu-toggle_is_active');
             }
         });
