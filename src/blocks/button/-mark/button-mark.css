@@ -1,0 +1,22 @@
+@import "__icon/button-mark__icon.css";
+@import "__icon/-delete/button-mark__icon-delete.css";
+
+.button-mark {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+
+.button-mark:focus {
+    outline: none;
+}
+
+.button-mark:hover {
+    cursor: pointer;
+}

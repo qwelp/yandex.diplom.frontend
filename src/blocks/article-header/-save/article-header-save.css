@@ -1,0 +1,16 @@
+.article-header-save {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(26, 27, 34, 0.5);
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 710px) {
+    .article-header-save {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,22 @@
+.load__img {
+    background-image: url(../../../images/load.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 74px;
+    height: 74px;
+    animation-name: rotation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin-bottom: 24px;
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}

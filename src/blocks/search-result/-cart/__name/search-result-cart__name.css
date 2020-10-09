@@ -1,0 +1,9 @@
+.search-result-cart__name {
+    margin: 0 24px 16px;
+}
+
+@media screen and (max-width: 1230px) {
+    .search-result-cart__name {
+        margin: 0 13px 10px;
+    }
+}

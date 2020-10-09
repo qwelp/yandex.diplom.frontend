@@ -1,0 +1,23 @@
+@import "__wrap/header-top-right__wrap.css";
+
+.header-top-right {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 710px) {
+    .header-top-right {
+        display: none;
+    }
+
+    .header-top_mobile_is_active .header-top-right {
+        display: block;
+        position: fixed;
+        top: 56px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+    }
+}

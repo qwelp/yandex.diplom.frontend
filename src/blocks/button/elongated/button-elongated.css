@@ -1,0 +1,33 @@
+@import "_white/button-elongated_white.css";
+@import "_blue/button-elongated_blue.css";
+@import "_white-fon/button-elongated_white-fon.css";
+@import "_theme/_white/button-elongated_theme_white.css";
+@import "__logout/button-elongated__logout.css";
+
+.button-elongated {
+    border-radius: 100px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.button-elongated:focus {
+    outline: none;
+}
+
+.button-elongated:hover {
+    background: #347EFF;
+}
+
+.button-elongated:active {
+    background: #2A65CC;
+}
+
+@media screen and (max-width: 1230px) {
+    .button-elongated {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,9 @@
+.load__img-not-search {
+    background-image: url(../../../images/not-found.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 96px;
+    height: 96px;
+    margin-bottom: 24px;
+}

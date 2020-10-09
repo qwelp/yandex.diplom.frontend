@@ -1,0 +1,26 @@
+.button-elongated-white_header_registration {
+    width: 176px;
+    height: 48px;
+    opacity: 1;
+    transition: opacity 350ms;
+}
+
+.button-elongated.button-elongated-white_header_registration:hover {
+    background-color: transparent;
+    opacity: .7;
+}
+
+@media screen and (max-width: 1230px) {
+    .button-elongated-white_header_registration {
+        width: 152px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .button-elongated-white_header_registration {
+        width: 100%;
+        height: 56px;
+        margin-bottom: 25px;
+    }
+}

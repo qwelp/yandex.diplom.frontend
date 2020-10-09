@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Об авторе</title>
+  <link rel="shortcut icon" href="<%=require('./images/favicon.png').default%>" type="image/x-icon">
+  <link rel="icon" href="<%=require('./images/favicon.png').default%>" type="image/x-icon">
+  <meta name="author" content="Бун Владимир">
+  <meta name="description" content="Поиск новостей">
+</head>
+<body>
+<div class="circle-preloader">
+  <div class="circle-preloader__wrap"></div>
+</div>
+<div class="root">
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-top__wrap">
+        <a href="/yandex.diplom.frontend/" class="header-logo">NewsExplorer</a>
+        <button class="mobile-menu-toggle"></button>
+        <div class="header-top-right">
+          <div class="header-top-right__wrap">
+            <ul class="menu menu_header_top">
+              <li class="menu__item menu__item_header_top_active">
+                <a href="/yandex.diplom.frontend/" class="menu__link">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a href="/yandex.diplom.frontend/saved_news.html" class="menu__link">Сохранённые статьи</a>
+              </li>
+            </ul>
+            <button class="button-elongated button-elongated_white button-elongated-white_header_registration">Авторизоваться</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header-main">
+        <h1 class="title-main title-main_header">Что в мире творится?</h1>
+        <p class="header-main__preview">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+        <form action="/" class="header-search">
+          <label class="header-search__label">
+            <input type="text" class="header-search__input" placeholder="Введите тему новости">
+          </label>
+          <button class="button-elongated button-elongated_blue button-elongated-blue_header_search" type="submit">Искать</button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="load">
+      <div class="load__img"></div>
+      <div class="load__title">Идет поиск новостей...</div>
+    </div>
+    <div class="load">
+      <div class="load__img-not-search"></div>
+      <div class="load__title-not-search">Ничего не найдено</div>
+      <div class="load__title">К сожалению по вашему запросу ничего не найдено.</div>
+    </div>
+    <section class="search-result">
+      <div class="container">
+        <h2 class="search-result__title title-h2">Результаты поиска</h2>
+        <div class="search-result-items">
+          <article class="search-result-cart">
+            <button class="button-mark search-result-cart__favourites search-result-cart__favourites_is_active" data-msg="Войдите, чтобы сохранять статьи">
+              <svg class="button-mark__icon">
+                <use xlink:href="#favourites"></use>
+              </svg>
+            </button>
+            <picture>
+              <img src="<%=require('./images/news/image_1.png').default%>" alt="Национальное достояние – парки" class="search-result-cart__image">
+            </picture>
+            <time class="search-result-cart__date" datetime="2019-09-02">2 августа, 2019</time>
+            <h3 class="search-result-cart__name title-h3">Национальное достояние – парки</h3>
+            <a href="#" class="search-result-cart__preview">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
+              национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            </a>
+            <cite class="search-result-cart__site">Лента.ру</cite>
+          </article>
+          <article class="search-result-cart">
+            <button class="button-mark search-result-cart__favourites" data-msg="Войдите, чтобы сохранять статьи">
+              <svg class="button-mark__icon">
+                <use xlink:href="#favourites"></use>
+              </svg>
+            </button>
+            <picture>
+              <img src="<%=require('./images/news/image_2.png').default%>" alt="Лесные огоньки: история одной фотографии" class="search-result-cart__image">
+            </picture>
+            <time class="search-result-cart__date" datetime="2019-09-02">2 августа, 2019</time>
+            <h3 class="search-result-cart__name title-h3">Лесные огоньки: история одной фотографии</h3>
+            <a href="#" class="search-result-cart__preview">
+              Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
+              ускользающую красоту одного из местных чудес природы.
+            </a>
+            <cite class="search-result-cart__site">Медуза</cite>
+          </article>
+          <article class="search-result-cart">
+            <button class="button-mark search-result-cart__favourites button-mark" data-msg="Войдите, чтобы сохранять статьи">
+              <svg class="button-mark__icon">
+                <use xlink:href="#favourites"></use>
+              </svg>
+            </button>
+            <picture>
+              <img src="<%=require('./images/news/image_3.png').default%>" alt="«Первозданная тайга»: новый фотопроект Игоря Шпиленка" class="search-result-cart__image">
+            </picture>
+            <time class="search-result-cart__date" datetime="2019-09-02">2 августа, 2019</time>
+            <h3 class="search-result-cart__name title-h3">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+            <a href="#" class="search-result-cart__preview">
+              Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их
+              сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+            </a>
+            <cite class="search-result-cart__site">Риа</cite>
+          </article>
+        </div>
+        <button class="button-elongated button-elongated_white-fon button-elongated_white-fon_search-result-items" type="submit">
+          Показать еще
+        </button>
+      </div>
+    </section>
+    <section class="container author">
+      <img src="<%=require('./images/author.png').default%>" alt="Автор" class="author__image">
+      <div class="author__wrap">
+        <h2 class="author__title title-h2">Об авторе</h2>
+        <p class="author__preview">
+          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими
+          технологиями разработки владеете.
+        </p>
+        <p class="author__preview">
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+          потенциальным заказчикам.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
+      <ul class="menu menu_footer">
+        <li class="menu__item menu__item_footer">
+          <a href="#" class="menu__link menu__link_footer">Главная</a>
+        </li>
+        <li class="menu__item menu__item_footer">
+          <a href="#" class="menu__link menu__link_footer">Яндекс.Практикум</a>
+        </li>
+      </ul>
+      <ul class="menu menu_footer_smo">
+        <li class="menu__item menu__item_footer_smo">
+          <a href="#" class="menu__link">
+            <img src="<%=require('./images/icon/github.svg').default%>" alt="github" class="menu-icon menu-icon_github">
+          </a>
+        </li>
+        <li class="menu__item menu__item_footer_smo">
+          <a href="#" class="menu__link">
+            <img src="<%=require('./images/icon/facebook.svg').default%>" alt="facebook" class="menu-icon menu-icon_facebook">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
+<div id="aut-form" class="popup">
+  <div class="popup__wrap">
+    <button class="button-close popup__close">
+      <svg class="button-close__icon popup__close-icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+    <h2 class="popup__title">Вход</h2>
+    <form class="popup__form">
+      <div class="popup__row">
+        <label for="email" class="popup__label">Email</label>
+        <input type="email" name="email" id="email" class="popup__input" placeholder="example@test.com">
+        <p class="popup__error popup__error_is_active">Неправильный формат email</p>
+      </div>
+      <div class="popup__row">
+        <label for="password" class="popup__label">Пароль</label>
+        <input type="password" name="password" id="password" class="popup__input" placeholder="••••••••••••">
+        <p class="popup__error">Неправильный пароль</p>
+      </div>
+      <button class="button-submit popup__submit" type="submit">Войти</button>
+    </form>
+    <p class="popup__reg">
+      или <button id="open-reg-form" class="popup__reg-button">Зарегистрироваться</button>
+    </p>
+  </div>
+</div>
+<div id="reg-form" class="popup">
+  <div class="popup__wrap">
+    <button class="button-close popup__close">
+      <svg class="button-close__icon popup__close-icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+    <div class="popup__step-one popup__step-one_is_active">
+      <h2 class="popup__title">Регистрация</h2>
+      <form class="popup__form">
+        <div class="popup__row">
+          <label for="reg-email" class="popup__label">Email</label>
+          <input type="email" name="reg-email" id="reg-email" class="popup__input" placeholder="example@test.com">
+          <p class="popup__error popup__error_is_active">Неправильный формат email</p>
+        </div>
+        <div class="popup__row">
+          <label for="reg-password" class="popup__label">Пароль</label>
+          <input type="password" name="password" id="reg-password" class="popup__input" placeholder="Введите пароль">
+          <p class="popup__error">Неправильный формат пароль</p>
+        </div>
+        <div class="popup__row">
+          <label for="reg-name" class="popup__label">Имя</label>
+          <input type="text" name="reg-email" id="reg-name" class="popup__input" placeholder="Введите своё имя">
+          <p class="popup__error popup__error_is_active text-center">Такой пользователь уже есть</p>
+        </div>
+        <button class="button-submit popup__submit" disabled type="submit">Зарегистрироваться</button>
+      </form>
+      <p class="popup__reg">
+        или <button class="popup__reg-button open-login-form">Войти</button>
+      </p>
+    </div>
+   <div class="popup__step-two">
+     <p class="popup__step-two__text">Пользователь успешно зарегистрирован!</p>
+     <button class="popup__reg-button popup__step-two__button open-login-form">Войти</button>
+   </div>
+  </div>
+</div>
+<div class="hide">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="logout" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z"/>
+    </symbol>
+    <symbol id="favourites" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z"/>
+    </symbol>
+    <symbol id="delete" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z"/>
+    </symbol>
+    <symbol id="close" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.3566 20L31.1781 28.8215L28.8211 31.1785L18.3497 20.7071C17.9592 20.3166 17.9592 19.6834 18.3497 19.2929L28.8211 8.82147L31.1781 11.1785L22.3566 20Z" fill="white"/>
+      <path d="M18.1307 20L9.30919 28.8215L11.6662 31.1785L22.1376 20.7071C22.5281 20.3166 22.5281 19.6834 22.1376 19.2929L11.6662 8.82147L9.30919 11.1785L18.1307 20Z" fill="white"/>
+    </symbol>
+  </svg>
+</div>
+</body>
+</html>

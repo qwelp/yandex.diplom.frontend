@@ -1,0 +1,16 @@
+@import "__image/search-result-cart__image.css";
+@import "__date/search-result-cart__date.css";
+@import "__name/search-result-cart__name.css";
+@import "__preview/search-result-cart__preview.css";
+@import "__site/search-result-cart__site.css";
+@import "__favourites/search-result-cart__favourites.css";
+@import "__catid/search-result-cart__catid.css";
+
+.search-result-cart {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}

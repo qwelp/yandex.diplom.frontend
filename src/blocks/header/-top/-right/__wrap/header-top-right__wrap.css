@@ -1,0 +1,16 @@
+.header-top-right__wrap {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 710px) {
+    .header-top-right__wrap {
+        background-color: #1A1B22;
+        position: relative;
+        padding: 35px 15px 25px;
+        opacity: 1;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+

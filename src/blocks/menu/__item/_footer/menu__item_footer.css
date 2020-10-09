@@ -1,0 +1,19 @@
+.menu__item.menu__item_footer:not(:last-child) {
+    margin-right: 38px;
+}
+
+@media screen and (max-width: 1230px) {
+    .menu__item.menu__item_footer:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .menu__item.menu__item_footer:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .menu__item.menu__item_footer:not(:last-child) {
+        margin-bottom: 23px;
+    }
+}

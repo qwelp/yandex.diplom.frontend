@@ -1,0 +1,30 @@
+.search-result-cart__preview {
+    margin: 0 24px 10px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-decoration: none;
+    color: #000000;
+}
+
+.search-result-cart__preview:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1230px) {
+    .search-result-cart__preview {
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        display: -webkit-box;
+        margin: 0 13px 10px;
+    }
+}

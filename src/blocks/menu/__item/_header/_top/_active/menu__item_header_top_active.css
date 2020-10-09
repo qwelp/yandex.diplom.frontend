@@ -1,0 +1,15 @@
+.menu__item_header_top_active {
+    border-bottom: 3px solid white;
+}
+
+@media screen and (min-width: 710px) {
+    .header_theme_white .menu__item_header_top_active {
+        border-bottom-color: #1A1B22;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .header-top_mobile_is_active .menu__item_header_top_active {
+        border: 0;
+    }
+}
