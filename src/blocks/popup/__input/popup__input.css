@@ -9,6 +9,7 @@
     color: #000000;
     width: 100%;
     padding: 0;
+    transition: border-bottom-color 350ms;
 }
 
 .popup__input::placeholder {
@@ -17,6 +18,7 @@
 
 .popup__input:focus {
     outline: none;
+    border-bottom-color: #1A1B22;
 }
 
 @media screen and (max-width: 550px) {

@@ -1,10 +1,13 @@
 .button-elongated-white_header_registration {
     width: 176px;
     height: 48px;
+    opacity: 1;
+    transition: opacity 350ms;
 }
 
 .button-elongated.button-elongated-white_header_registration:hover {
     background-color: transparent;
+    opacity: .7;
 }
 
 @media screen and (max-width: 1230px) {

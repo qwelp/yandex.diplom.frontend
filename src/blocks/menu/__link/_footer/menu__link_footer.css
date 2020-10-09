@@ -1,5 +1,11 @@
 .menu__link.menu__link_footer {
     color: #1A1B22;
+    transition: all 350ms;
+    border-bottom: 1px solid transparent;
+}
+
+.menu__link.menu__link_footer:hover {
+    border-bottom: 1px solid currentColor;
 }
 
 @media screen and (max-width: 1230px) {

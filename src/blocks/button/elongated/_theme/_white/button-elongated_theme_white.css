@@ -3,10 +3,13 @@
     padding: 12px 14px;
     display: flex;
     align-items: center;
+    opacity: 1;
+    transition: opacity 350ms;
 }
 
 .button-elongated.button-elongated_theme_white:hover {
     background-color: transparent;
+    opacity: .7;
 }
 
 @media screen and (max-width: 710px) {

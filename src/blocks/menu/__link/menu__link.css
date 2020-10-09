@@ -12,12 +12,33 @@
     align-items: stretch;
 }
 
+.menu_header_top .menu__link {
+    transition: color 350ms;
+}
+
+.menu_header_top .menu__link:hover {
+    color: white;
+}
+
 .menu__item.menu__item_header_top_active .menu__link {
     color: white;
 }
 
 .menu_header_top .menu__link {
     color: #B6BCBF;
+}
+
+.menu_footer_smo .menu__link {
+    opacity: 1;
+    transition: opacity 350ms;
+}
+
+.menu_footer_smo .menu__link:hover {
+    opacity: .5;
+}
+
+.header_theme_white .menu_header_top .menu__link:hover {
+    color: #888888;
 }
 
 @media screen and (min-width: 710px) {

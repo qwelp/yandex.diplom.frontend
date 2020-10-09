@@ -7,6 +7,7 @@
     .footer__container {
         flex-wrap: wrap;
         align-items: flex-start;
+        padding-top: 16px;
         padding-bottom: 16px;
     }
 }

@@ -9,6 +9,8 @@
     letter-spacing: 0;
     color: #1A1B22;
     background-color: transparent;
+    transition: border-bottom-color 350ms;
+    border-bottom: 1px solid transparent;
 }
 
 .header-search__input::placeholder {
@@ -17,6 +19,7 @@
 
 .header-search__input:focus {
     outline: none;
+    border-bottom-color: #1A1B22;
 }
 
 @media screen and (max-width: 710px) {

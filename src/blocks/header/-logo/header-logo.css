@@ -7,6 +7,12 @@
     letter-spacing: 0;
     color: white;
     text-decoration: none;
+    opacity: 1;
+    transition: opacity 350ms;
+}
+
+.header-logo:hover {
+    opacity: .7;
 }
 
 .header_theme_white .header-logo {

@@ -4,6 +4,7 @@
     position: absolute;
     top: 25px;
     right: 25px;
+    z-index: 50;
 }
 
 .search-result-cart__favourites:hover:before {
