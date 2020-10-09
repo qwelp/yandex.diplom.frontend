@@ -1,30 +1,4 @@
 import "./main.css"
-/*import constantsCommon from "./js/constants/common"
-import BaseComponent from "./js/components/BaseComponent"
-import Header from "./js/components/Header"
-import MainApi from "./js/api/MainApi"
-
-(function () {
-    const header = new Header({
-        preloader: constantsCommon.CIRCLE_PRELOADER
-    });
-
-    const mainApi = new MainApi({
-        urlRestServer: constantsCommon.URL_REST_SERVER
-    });
-
-    const data = {
-        "name": "qwelp",
-        "email": "qwelp@mail.ru",
-        "password": "!!!dl032nh"
-    };
-
-    mainApi.signup(data)
-        .then((res) => {
-            console.log('res', res);
-        })
-        .catch((err) => console.log(err));
-})();*/
 
 (function () {
     // Button mobile menu
