@@ -1,6 +1,38 @@
 import "./main.css";
+import constCommon from "./js/constants/common";
+import constError from "./js/constants/errorsMess";
+import constHeader from "./js/constants/header";
+import constErrorForm from "./js/constants/errorForm";
+import MainApi from "./js/api/MainApi";
+import Header from "./js/components/Header";
+import Popup from "./js/components/Popup";
+import Form from "./js/components/Form";
 
 (function () {
+    const header = new Header({ preloader: constCommon.PRELOADER });
+    const mainApi = new MainApi({
+        urlServerRest: constCommon.URL_SERVER_REST,
+        headerConfig: constHeader.HEADER
+    });
+    const form = new Form({
+        mainApi,
+        errorMess: constErrorForm,
+        body: constCommon.BODY
+    });
+    const popup = new Popup({
+        formClass: form,
+        body: constCommon.BODY
+    });
+
+    mainApi.getUserData()
+        .then((res) => {
+           console.log(res);
+        });
+
+    constCommon.BTN_OPEN_POPUP_LOGIN_FORM.addEventListener('click', () => popup.open('login'));
+})();
+
+/*(function () {
     // Button mobile menu
     const circlePreloader = document.querySelector('.circle-preloader');
     const mobileButtonMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -71,4 +103,4 @@ import "./main.css";
             }
         });
     });
-})();
+})();*/

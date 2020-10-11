@@ -27,7 +27,7 @@
                 <a href="/" class="menu__link">Главная</a>
               </li>
             </ul>
-            <button class="button-elongated button-elongated_white button-elongated-white_header_registration">Авторизоваться</button>
+            <button class="button-elongated button-elongated_white button-elongated-white_header_registration popup-login-open">Авторизоваться</button>
           </div>
         </div>
       </div>
@@ -156,69 +156,6 @@
       </ul>
     </div>
   </footer>
-</div>
-<div id="aut-form" class="popup">
-  <div class="popup__wrap">
-    <button class="button-close popup__close">
-      <svg class="button-close__icon popup__close-icon">
-        <use xlink:href="#close"></use>
-      </svg>
-    </button>
-    <h2 class="popup__title">Вход</h2>
-    <form class="popup__form">
-      <div class="popup__row">
-        <label for="email" class="popup__label">Email</label>
-        <input type="email" name="email" id="email" class="popup__input" placeholder="example@test.com">
-        <p class="popup__error popup__error_is_active">Неправильный формат email</p>
-      </div>
-      <div class="popup__row">
-        <label for="password" class="popup__label">Пароль</label>
-        <input type="password" name="password" id="password" class="popup__input" placeholder="••••••••••••">
-        <p class="popup__error">Неправильный пароль</p>
-      </div>
-      <button class="button-submit popup__submit" type="submit">Войти</button>
-    </form>
-    <p class="popup__reg">
-      или <button id="open-reg-form" class="popup__reg-button">Зарегистрироваться</button>
-    </p>
-  </div>
-</div>
-<div id="reg-form" class="popup">
-  <div class="popup__wrap">
-    <button class="button-close popup__close">
-      <svg class="button-close__icon popup__close-icon">
-        <use xlink:href="#close"></use>
-      </svg>
-    </button>
-    <div class="popup__step-one popup__step-one_is_active">
-      <h2 class="popup__title">Регистрация</h2>
-      <form class="popup__form">
-        <div class="popup__row">
-          <label for="reg-email" class="popup__label">Email</label>
-          <input type="email" name="reg-email" id="reg-email" class="popup__input" placeholder="example@test.com">
-          <p class="popup__error popup__error_is_active">Неправильный формат email</p>
-        </div>
-        <div class="popup__row">
-          <label for="reg-password" class="popup__label">Пароль</label>
-          <input type="password" name="password" id="reg-password" class="popup__input" placeholder="Введите пароль">
-          <p class="popup__error">Неправильный формат пароль</p>
-        </div>
-        <div class="popup__row">
-          <label for="reg-name" class="popup__label">Имя</label>
-          <input type="text" name="reg-email" id="reg-name" class="popup__input" placeholder="Введите своё имя">
-          <p class="popup__error popup__error_is_active text-center">Такой пользователь уже есть</p>
-        </div>
-        <button class="button-submit popup__submit" disabled type="submit">Зарегистрироваться</button>
-      </form>
-      <p class="popup__reg">
-        или <button class="popup__reg-button open-login-form">Войти</button>
-      </p>
-    </div>
-   <div class="popup__step-two">
-     <p class="popup__step-two__text">Пользователь успешно зарегистрирован!</p>
-     <button class="popup__reg-button popup__step-two__button open-login-form">Войти</button>
-   </div>
-  </div>
 </div>
 <div class="hide">
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
