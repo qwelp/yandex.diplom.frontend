@@ -1,5 +1,3 @@
-import constError from "../constants/errorsMess";
-
 export default class {
 
     constructor({ mainApi, errorMess, body }) {
@@ -14,24 +12,25 @@ export default class {
         this.form = this.popup._popup.querySelector('form');
         this._inputs = Array.from(this.form.querySelectorAll('input'));
         this._submit = this.form.querySelector('[type="submit"]');
-        this._errorElements = Array.from(this.form.querySelectorAll('.popup__error'));
 
         this._setEventListeners();
         this._addListeners();
     }
 
-    // добавляет форме ошибку, пришедшую с сервера;
-    setServerError = data => {
+    setServer = (data) => {
         this._errorServerMessage = this.form.querySelector('#error-server');
 
         if(this.form.dataset.type === 'login') {
             this.mainApi.signin(data)
                 .then((res) => {
-                    console.log(res);
+                    localStorage.setItem('token', res.token);
+                    document.location.href = window.location.href;
                 })
                 .catch((err) => {
-                    this._errorServerMessage.textContent = 'Неправильные почта или пароль!';
+                    this._errorServerMessage.textContent = this.errorMess.EMAIL_PASSWORD_ERROR;
                     this._errorServerMessage.classList.add('popup__error_is_active');
+
+                    console.log(err);
                 });
         }
 
@@ -46,11 +45,16 @@ export default class {
                 })
                 .catch((err) => {
                     if (err.status === 409) {
-                        this._errorServerMessage.textContent = 'Такой пользователь существует!';
+                        this._errorServerMessage.textContent = this.errorMess.USER_EXIST;
                         this._errorServerMessage.classList.add('popup__error_is_active');
                     } else if(err.status === 400) {
-                        this._errorServerMessage.textContent = 'Не правильный формат данных!';
+                        this._errorServerMessage.textContent = this.errorMess.INCORRECT_DATA_FORMAT;
                         this._errorServerMessage.classList.add('popup__error_is_active');
+                    } else if(err.status === 500) {
+                        this._errorServerMessage.textContent = this.errorMess.USER_EXIST;
+                        this._errorServerMessage.classList.add('popup__error_is_active');
+                    } else {
+                        console.log(err);
                     }
                 });
         }
@@ -96,7 +100,6 @@ export default class {
         }
     }
 
-    // валидирует всю форму;
     _validateForm = () => {
         const isInputsValueEmpty = this._inputs.some((input) => input.value === '');
         this._inputs.forEach((input) => this._validateInputElement(input));
@@ -124,7 +127,7 @@ export default class {
             return obj;
         }, {});
 
-        this.setServerError(data);
+        this.setServer(data);
     }
 
     _addListeners = () => {
@@ -135,12 +138,10 @@ export default class {
         this.form.removeEventListener('submit', this._sendForm);
     }
 
-    // вспомогательный метод, очищает поля формы;
     _clear = () => {
         this.form.reset();
     }
 
-    //  вспомогательный метод, возвращает данные формы.
     _getInfo = () => {
         return this._inputs.reduce((obj, input) => {
             obj[input.name] = input.value;

@@ -3,8 +3,8 @@
 ## Дипломная работа. Frontend
 
 ### Страницы
-1. https://qwelp.github.io/yandex.diplom.frontend/
-2. https://qwelp.github.io/yandex.diplom.frontend/saved_news.html
+1. https://praktikum-qwelp.ru/
+2. https://praktikum-qwelp.ru/saved_news.html
 
 ### Установка
 1. git clone https://github.com/qwelp/yandex.diplom.frontend.git

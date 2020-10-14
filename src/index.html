@@ -11,9 +11,6 @@
   <meta name="description" content="Поиск новостей">
 </head>
 <body>
-<div class="circle-preloader">
-  <div class="circle-preloader__wrap"></div>
-</div>
 <div class="root">
   <header class="header">
     <div class="header-top">
@@ -26,8 +23,10 @@
               <li class="menu__item menu__item_header_top_active">
                 <a href="/" class="menu__link">Главная</a>
               </li>
+              <li class="menu__item">
+                <a href="/saved_news.html" class="menu__link">Сохранённые статьи</a>
+              </li>
             </ul>
-            <button class="button-elongated button-elongated_white button-elongated-white_header_registration popup-login-open">Авторизоваться</button>
           </div>
         </div>
       </div>
@@ -46,76 +45,7 @@
     </div>
   </header>
   <main class="main">
-    <div class="load">
-      <div class="load__img"></div>
-      <div class="load__title">Идет поиск новостей...</div>
-    </div>
-    <div class="load">
-      <div class="load__img-not-search"></div>
-      <div class="load__title-not-search">Ничего не найдено</div>
-      <div class="load__title">К сожалению по вашему запросу ничего не найдено.</div>
-    </div>
-    <section class="search-result">
-      <div class="container">
-        <h2 class="search-result__title title-h2">Результаты поиска</h2>
-        <div class="search-result-items">
-          <article class="search-result-cart">
-            <button class="button-mark search-result-cart__favourites search-result-cart__favourites_is_active" data-msg="Войдите, чтобы сохранять статьи">
-              <svg class="button-mark__icon">
-                <use xlink:href="#favourites"></use>
-              </svg>
-            </button>
-            <picture>
-              <img src="<%=require('./images/news/image_1.png').default%>" alt="Национальное достояние – парки" class="search-result-cart__image">
-            </picture>
-            <time class="search-result-cart__date" datetime="2019-09-02">2 августа, 2019</time>
-            <h3 class="search-result-cart__name title-h3">Национальное достояние – парки</h3>
-            <p class="search-result-cart__preview">
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
-              национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <cite class="search-result-cart__site">Лента.ру</cite>
-          </article>
-          <article class="search-result-cart">
-            <button class="button-mark search-result-cart__favourites" data-msg="Войдите, чтобы сохранять статьи">
-              <svg class="button-mark__icon">
-                <use xlink:href="#favourites"></use>
-              </svg>
-            </button>
-            <picture>
-              <img src="<%=require('./images/news/image_2.png').default%>" alt="Лесные огоньки: история одной фотографии" class="search-result-cart__image">
-            </picture>
-            <time class="search-result-cart__date" datetime="2019-09-02">2 августа, 2019</time>
-            <h3 class="search-result-cart__name title-h3">Лесные огоньки: история одной фотографии</h3>
-            <p class="search-result-cart__preview">
-              Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть
-              ускользающую красоту одного из местных чудес природы.
-            </p>
-            <cite class="search-result-cart__site">Медуза</cite>
-          </article>
-          <article class="search-result-cart">
-            <button class="button-mark search-result-cart__favourites button-mark" data-msg="Войдите, чтобы сохранять статьи">
-              <svg class="button-mark__icon">
-                <use xlink:href="#favourites"></use>
-              </svg>
-            </button>
-            <picture>
-              <img src="<%=require('./images/news/image_3.png').default%>" alt="«Первозданная тайга»: новый фотопроект Игоря Шпиленка" class="search-result-cart__image">
-            </picture>
-            <time class="search-result-cart__date" datetime="2019-09-02">2 августа, 2019</time>
-            <h3 class="search-result-cart__name title-h3">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-            <p class="search-result-cart__preview">
-              Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их
-              сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-            </p>
-            <cite class="search-result-cart__site">Риа</cite>
-          </article>
-        </div>
-        <button class="button-elongated button-elongated_white-fon button-elongated_white-fon_search-result-items" type="submit">
-          Показать еще
-        </button>
-      </div>
-    </section>
+
     <section class="container author">
       <img src="<%=require('./images/author.png').default%>" alt="Автор" class="author__image">
       <div class="author__wrap">
@@ -136,15 +66,15 @@
       <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
       <ul class="menu menu_footer">
         <li class="menu__item menu__item_footer">
-          <a href="#" class="menu__link menu__link_footer">Главная</a>
+          <a href="/" class="menu__link menu__link_footer">Главная</a>
         </li>
         <li class="menu__item menu__item_footer">
-          <a href="#" class="menu__link menu__link_footer">Яндекс.Практикум</a>
+          <a href="https://praktikum.yandex.ru/" class="menu__link menu__link_footer">Яндекс.Практикум</a>
         </li>
       </ul>
       <ul class="menu menu_footer_smo">
         <li class="menu__item menu__item_footer_smo">
-          <a href="#" class="menu__link">
+          <a href="https://github.com/qwelp" class="menu__link">
             <img src="<%=require('./images/icon/github.svg').default%>" alt="github" class="menu-icon menu-icon_github">
           </a>
         </li>

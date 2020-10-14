@@ -7,7 +7,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
     "deploy_gh_pages": "cross-env NODE_ENV=production gh-pages -d dist",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "scp -r ./dist/* qwelp@178.154.225.23:/home/qwelp/diplom/"
   },
   "author": "Бун Владимир",
   "license": "ISC",

@@ -3,6 +3,7 @@
 @import "_white-fon/button-elongated_white-fon.css";
 @import "_theme/_white/button-elongated_theme_white.css";
 @import "__logout/button-elongated__logout.css";
+@import "_theme/_black/button-elongated_theme_black.css";
 
 .button-elongated {
     border-radius: 100px;

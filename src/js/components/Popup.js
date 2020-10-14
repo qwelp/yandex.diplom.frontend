@@ -1,27 +1,22 @@
 export default class {
 
-    constructor({ formClass, body }) {
+    constructor({ formClass, body, baseComponent }) {
         this.formClass = formClass;
         this.body = body;
+        this.baseComponent = baseComponent;
     }
 
     setContent(popupHtml) {
-        this._popup = this._wrapCreate(this._popupBlock()).querySelector('.popup');
+        this._popup = this.baseComponent.wrapCreate(this._popupBlock()).querySelector('.popup');
         this._popup.querySelector('.popup__close').insertAdjacentHTML('afterend', popupHtml);
         this._btnOpenLogin = this._popup.querySelector('.popup-login-popup-open');
         this._btnOpenReg = this._popup.querySelector('.popup-reg-popup-open');
+        this._btnCloseLogin = this._popup.querySelector('.popup-login-popup-close');
         this.body.append(this._popup);
 
         this.formClass.init({ popup: this });
 
         this._addListeners();
-    }
-
-    _wrapCreate = html => {
-        const popupWrap = document.createElement('div');
-        popupWrap.insertAdjacentHTML('beforeend', html);
-
-        return popupWrap;
     }
 
     _popupBlock = () => {
@@ -90,7 +85,7 @@ export default class {
     _regOkBlock = () => {
         return `<form data-type="reg-ok" class="popup__form">
             <p class="popup__step-two__text">Пользователь успешно зарегистрирован!</p>
-            <button href="#" class="popup__reg-button popup__step-two__button popup-login-popup-open">Войти</button>
+            <button class="popup__reg-button popup__step-two__button popup-login-popup-open">Войти</button>
         </form>`;
     }
 

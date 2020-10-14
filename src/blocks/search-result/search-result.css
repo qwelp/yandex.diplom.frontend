@@ -2,6 +2,7 @@
 @import "-items/search-result-items.css";
 @import "__title/search-result__title.css";
 @import "_article-save/search-result_article-save.css";
+@import "-cart/__picture/search-result-cart__picture.css";
 
 .search-result {
     background: #F5F6F7;

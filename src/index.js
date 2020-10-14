@@ -3,104 +3,80 @@ import constCommon from "./js/constants/common";
 import constError from "./js/constants/errorsMess";
 import constHeader from "./js/constants/header";
 import constErrorForm from "./js/constants/errorForm";
+import BaseComponent from "./js/components/BaseComponent";
 import MainApi from "./js/api/MainApi";
 import Header from "./js/components/Header";
 import Popup from "./js/components/Popup";
 import Form from "./js/components/Form";
+import NewsCardList from "./js/components/NewsCardList";
+import NewsCard from "./js/components/NewsCard";
 
 (function () {
-    const header = new Header({ preloader: constCommon.PRELOADER });
+    const baseComponent = new BaseComponent();
+
     const mainApi = new MainApi({
         urlServerRest: constCommon.URL_SERVER_REST,
-        headerConfig: constHeader.HEADER
+        headerConfig: constHeader.HEADER,
+        newsapiKey: constCommon.NEWSAPI_KEY
     });
+
     const form = new Form({
         mainApi,
         errorMess: constErrorForm,
         body: constCommon.BODY
     });
+
     const popup = new Popup({
         formClass: form,
-        body: constCommon.BODY
+        body: constCommon.BODY,
+        baseComponent
     });
 
-    mainApi.getUserData()
-        .then((res) => {
-           console.log(res);
-        });
+    const header = new Header({
+        wrapBtnLogin: constCommon.HEADER_WRAP_BTN_LOGIN,
+        baseComponent,
+        body: constCommon.BODY,
+        headerTheme: constCommon.HEADER_THEME,
+        popup: popup,
+        mainApi: mainApi,
+        articlePage: constCommon.ARTICLE_PAGE
+    });
 
-    constCommon.BTN_OPEN_POPUP_LOGIN_FORM.addEventListener('click', () => popup.open('login'));
+    const newsCard = new NewsCard({ baseComponent });
+
+    const newsCardList = new NewsCardList({
+        mainApi,
+        searchForm: constCommon.SEARCH_FORM,
+        mainBLock: constCommon.MAIN_BLOCK,
+        baseComponent,
+        newsCard: newsCard,
+        header,
+        articlePage: constCommon.ARTICLE_PAGE
+    });
+
+    header.preloaderLoad();
+
+    if(localStorage.getItem('token')) {
+        header.isLoggedIn().then((res) => {
+            header.preloaderRemove();
+            res.name ? header.viewBtnUser(res.name) : header.viewBtnLogin();
+        })
+        .catch(() => {
+            header.preloaderRemove();
+            header.viewBtnLogin();
+        });
+    } else {
+        header.preloaderRemove();
+        header.viewBtnLogin();
+    }
+
+    if(constCommon.SEARCH_FORM) {
+        constCommon.SEARCH_FORM.addEventListener('submit', (event) => {
+            newsCardList.searchNews(event);
+        });
+    }
+
+    if(constCommon.ARTICLE_PAGE) {
+        newsCardList.searchNews(false, true);
+    }
 })();
-
-/*(function () {
-    // Button mobile menu
-    const circlePreloader = document.querySelector('.circle-preloader');
-    const mobileButtonMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const headerTopRight = document.querySelector('.header-top-right');
-    const headerTop = document.querySelector('.header-top');
-    const body = document.querySelector('body');
-    const autButton = document.querySelector('.button-elongated-white_header_registration');
-    const autForm = document.querySelector('#aut-form');
-    const buttonOpenRegForm = document.querySelector('#open-reg-form');
-    const buttonOpenLoginForm = Array.from(document.querySelectorAll('.open-login-form'));
-    const regForm = document.querySelector('#reg-form');
-    const popup = Array.from(document.querySelectorAll('.popup'));
-
-    document.addEventListener("DOMContentLoaded", () => {
-        circlePreloader.remove();
-    });
-
-    buttonOpenLoginForm.forEach((item) => {
-        item.addEventListener('click', () => {
-            autForm.classList.add('popup_is_active');
-            regForm.classList.remove('popup_is_active');
-        });
-    });
-
-    buttonOpenRegForm.addEventListener('click', () => {
-        autForm.classList.remove('popup_is_active');
-        regForm.classList.add('popup_is_active');
-    });
-
-    // Toggle mobile menu
-    mobileButtonMenuToggle.addEventListener('click', () => {
-        if (mobileButtonMenuToggle.classList.contains('mobile-menu-toggle_is_active')) {
-            autForm.classList.remove('popup_is_active');
-            mobileButtonMenuToggle.classList.remove('mobile-menu-toggle_is_active');
-        } else {
-            headerTop.classList.toggle('header-top_mobile_is_active');
-            body.classList.toggle('overflow-hidden');
-        }
-    });
-    // Click fon mobile menu
-    headerTopRight.addEventListener('click', (event) => {
-        const target = event.target;
-        if (!target.closest('.header-top-right__wrap') && headerTop.classList.contains('header-top_mobile_is_active')) {
-            headerTop.classList.toggle('header-top_mobile_is_active');
-            body.classList.toggle('overflow-hidden');
-        }
-    });
-
-    autButton.addEventListener('click', () => {
-        headerTop.classList.toggle('header-top_mobile_is_active');
-        body.classList.toggle('overflow-hidden');
-        autForm.classList.add('popup_is_active');
-        mobileButtonMenuToggle.classList.add('mobile-menu-toggle_is_active');
-    });
-
-    popup.forEach((item) => {
-        item.addEventListener('click', (event) => {
-            const target = event.target;
-            if (
-                !target.closest('.popup__wrap')
-                || target.classList.contains('.popup__close')
-                || target.closest('.popup__close')
-            ) {
-                autForm.classList.remove('popup_is_active');
-                regForm.classList.remove('popup_is_active');
-                body.classList.toggle('overflow-hidden');
-                mobileButtonMenuToggle.classList.remove('mobile-menu-toggle_is_active');
-            }
-        });
-    });
-})();*/
