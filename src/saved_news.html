@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сохранённые статьи</title>
+    <link rel="shortcut icon" href="<%=require('./images/favicon.png').default%>" type="image/x-icon">
+    <link rel="icon" href="<%=require('./images/favicon.png').default%>" type="image/x-icon">
+    <meta name="author" content="Бун Владимир">
+    <meta name="description" content="Сохраненые новости">
+</head>
+<body>
+<div class="root page-article-save">
+    <header class="header header_theme_white">
+        <div class="header-top">
+            <div class="container header-top__wrap">
+                <a href="/" class="header-logo">NewsExplorer</a>
+                <button class="mobile-menu-toggle"></button>
+                <div class="header-top-right">
+                    <div class="header-top-right__wrap">
+                        <ul class="menu menu_header_top">
+                            <li class="menu__item">
+                                <a href="/" class="menu__link">Главная</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main"></main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
+            <ul class="menu menu_footer">
+                <li class="menu__item menu__item_footer">
+                    <a href="/" class="menu__link menu__link_footer">Главная</a>
+                </li>
+                <li class="menu__item menu__item_footer">
+                    <a href="https://praktikum.yandex.ru/" class="menu__link menu__link_footer">Яндекс.Практикум</a>
+                </li>
+            </ul>
+            <ul class="menu menu_footer_smo">
+                <li class="menu__item menu__item_footer_smo">
+                    <a href="https://github.com/qwelp" class="menu__link">
+                        <img src="<%=require('./images/icon/github.svg').default%>" alt="github" class="menu-icon menu-icon_github">
+                    </a>
+                </li>
+                <li class="menu__item menu__item_footer_smo">
+                    <a href="#" class="menu__link">
+                        <img src="<%=require('./images/icon/facebook.svg').default%>" alt="facebook" class="menu-icon menu-icon_facebook">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<div class="hide">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="logout" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z"/>
+        </symbol>
+        <symbol id="favourites" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z"/>
+        </symbol>
+        <symbol id="delete" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z"/>
+        </symbol>
+        <symbol id="close" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.3566 20L31.1781 28.8215L28.8211 31.1785L18.3497 20.7071C17.9592 20.3166 17.9592 19.6834 18.3497 19.2929L28.8211 8.82147L31.1781 11.1785L22.3566 20Z" fill="white"/>
+            <path d="M18.1307 20L9.30919 28.8215L11.6662 31.1785L22.1376 20.7071C22.5281 20.3166 22.5281 19.6834 22.1376 19.2929L11.6662 8.82147L9.30919 11.1785L18.1307 20Z" fill="white"/>
+        </symbol>
+    </svg>
+</div>
+</body>
+</html>

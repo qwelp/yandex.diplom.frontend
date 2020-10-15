@@ -1,0 +1,10 @@
+@import "_header/_top/menu_header_top.css";
+@import "_footer/menu_footer.css";
+@import "__item/menu__item.css";
+@import "__link/menu__link.css";
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+}

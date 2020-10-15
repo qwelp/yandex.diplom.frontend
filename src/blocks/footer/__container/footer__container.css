@@ -1,0 +1,12 @@
+.footer__container {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 710px) {
+    .footer__container {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding-bottom: 16px;
+    }
+}

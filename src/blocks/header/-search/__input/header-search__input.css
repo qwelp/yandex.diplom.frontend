@@ -1,0 +1,26 @@
+.header-search__input {
+    width: 95%;
+    border: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #1A1B22;
+    background-color: transparent;
+}
+
+.header-search__input::placeholder {
+    color: #B6BCBF;
+}
+
+.header-search__input:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 710px) {
+    .header-search__input {
+        margin: 15px;
+    }
+}

@@ -1,0 +1,5 @@
+.idea
+node_modules
+dist
+link_for_pull_requests.txt
+link_for_pull_requests.zip

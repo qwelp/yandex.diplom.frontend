@@ -1,0 +1,19 @@
+.button-elongated_theme_white {
+    color: #1A1B22;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.button-elongated.button-elongated_theme_white:hover {
+    background-color: transparent;
+}
+
+@media screen and (max-width: 710px) {
+    .button-elongated_theme_white {
+        color: white;
+        width: 100%;
+        margin-bottom: 24px;
+        justify-content: space-between;
+    }
+}

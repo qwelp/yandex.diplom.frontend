@@ -1,0 +1,40 @@
+@import "_footer/menu__link_footer.css";
+
+.menu__link {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: stretch;
+}
+
+.menu__item.menu__item_header_top_active .menu__link {
+    color: white;
+}
+
+.menu_header_top .menu__link {
+    color: #B6BCBF;
+}
+
+@media screen and (min-width: 710px) {
+    .header_theme_white .menu__item.menu__item_header_top_active .menu__link,
+    .header_theme_white .menu__link {
+        color: #1A1B22;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .menu__link {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .menu_header_top .menu__link {
+        font-size: 18px;
+    }
+}

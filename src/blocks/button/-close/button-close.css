@@ -1,0 +1,5 @@
+@import "__icon/button-close__icon.css";
+
+.button-close:focus {
+    outline: none;
+}

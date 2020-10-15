@@ -1,0 +1,32 @@
+@import "vendor/normalize.css";
+@import "vendor/fonts/fonts.css";
+
+@import "blocks/hide/hide.css";
+@import "blocks/root/root.css";
+@import "blocks/container/container.css";
+@import "blocks/header/header.css";
+@import "blocks/menu/menu.css";
+@import "blocks/button/button.css";
+@import "blocks/title/title.css";
+@import "blocks/mobile/mobile.css";
+@import "blocks/author/author.css";
+@import "blocks/search-result/search-result.css";
+@import "blocks/load/load.css";
+@import "blocks/article-header/article-header.css";
+@import "blocks/popup/popup.css";
+@import "blocks/common/common.css";
+@import "blocks/circle-preloader/circle-preloader.css";
+
+@import "blocks/footer/footer.css";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}

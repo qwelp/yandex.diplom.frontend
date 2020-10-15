@@ -1,0 +1,22 @@
+@import "__title/author__title.css";
+@import "__preview/author__preview.css";
+@import "__image/author__image.css";
+
+.author {
+    display: flex;
+    padding: 80px 0 95px;
+}
+
+@media screen and (max-width: 1230px) {
+    .author {
+        padding: 40px 0;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .author {
+        flex-direction: column;
+        padding: 35px 15px 58px;
+    }
+}

@@ -1,0 +1,11 @@
+.button-mark__icon-delete {
+    width: 24px;
+    height: 24px;
+    transition: 350ms all;
+    fill: #B6BCBF;
+}
+
+.button-mark:hover .button-mark__icon-delete {
+    fill: #000000;
+}
+

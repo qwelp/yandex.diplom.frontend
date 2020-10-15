@@ -1,0 +1,23 @@
+@import "_header/_top/_active/menu__item_header_top_active.css";
+@import "_footer/_smo/menu__item_footer_smo.css";
+@import "_footer/menu__item_footer.css";
+
+.menu__item {
+    display: flex;
+    align-items: center;
+}
+
+.menu__item:not(:last-child) {
+    margin-right: 34px;
+}
+
+@media screen and (max-width: 710px) {
+    .menu_header_top .menu__item {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .menu_header_top .menu__item:not(:last-child) {
+        margin-right: 0;
+    }
+}

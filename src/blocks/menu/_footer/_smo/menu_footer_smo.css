@@ -1,0 +1,8 @@
+@media screen and (max-width: 710px) {
+    .menu_footer_smo {
+        flex-basis: 30%;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

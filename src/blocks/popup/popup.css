@@ -1,0 +1,32 @@
+@import "__close/popup__close.css";
+@import "__input/popup__input.css";
+@import "__label/popup__label.css";
+@import "__reg/popup__reg.css";
+@import "__reg-button/popup__reg-button.css";
+@import "__row/popup__row.css";
+@import "__submit/popup__submit.css";
+@import "__title/popup__title.css";
+@import "__wrap/popup__wrap.css";
+@import "__close-icon/popup__close-icon.css";
+@import "_is_active/popup_is_active.css";
+@import "__error/popup__error.css";
+@import "__step/popup__step.css";
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+    .popup {
+        top: 55px;
+        background-color: transparent;
+    }
+}

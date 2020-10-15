@@ -1,0 +1,14 @@
+@import "_search-result-items/button-elongated_white-fon_search-result-items.css";
+
+.button-elongated_white-fon {
+    background: #FFFFFF;
+    border-radius: 80px;
+    border: 0;
+    color: #1A1B22;
+}
+
+@media screen and (max-width: 1230px) {
+    .button-elongated.button-elongated_white-fon {
+        font-size: 18px;
+    }
+}

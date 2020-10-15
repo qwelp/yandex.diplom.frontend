@@ -1,0 +1,17 @@
+.button-elongated-blue_header_search {
+    width: 167px;
+    height: 64px;
+}
+
+@media screen and (max-width: 1230px) {
+    .button-elongated-blue_header_search {
+        height: 56px;
+        width: 155px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .button-elongated-blue_header_search {
+        width: 100%;
+    }
+}

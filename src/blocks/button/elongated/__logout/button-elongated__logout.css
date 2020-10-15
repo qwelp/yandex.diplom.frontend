@@ -1,0 +1,17 @@
+.button-elongated__logout {
+    width: 24px;
+    height: 24px;
+    fill: #1A1B22;
+    margin-left: 10px;
+}
+
+.button-elongated_theme_black .button-elongated__logout {
+    fill: white;
+}
+
+@media screen and (max-width: 710px) {
+    .button-elongated__logout {
+        fill: white;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,12 @@
+.button-mark__icon {
+    stroke: #B6BCBF;
+    stroke-width: 2px;
+    width: 14px;
+    height: 19px;
+    transition: 350ms all;
+    fill: #FFFFFF;
+}
+
+.button-mark:hover .button-mark__icon {
+    stroke: #000000;
+}
