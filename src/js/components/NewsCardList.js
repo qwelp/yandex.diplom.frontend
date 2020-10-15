@@ -20,19 +20,17 @@ export default class {
         if(localStorage.getItem('token')) {
             this.header.isLoggedIn().then((res) => {
                 this.aut = true;
+                this.userName = res.name;
             })
             .catch(() => {
-                this.aut = false;
-                if(this.articlePage) {
-                    this.renderLoaderNo = this.baseComponent.wrapCreate(this._templateEmptyResult()).querySelector('.load');
-                    this.mainBLock.prepend(this.renderLoaderNo);
-                }
+                document.location.href= '/';
             });
         } else {
             this.aut = false;
             if(this.articlePage) {
                 this.renderLoaderNo = this.baseComponent.wrapCreate(this._templateEmptyResult()).querySelector('.load');
                 this.mainBLock.prepend(this.renderLoaderNo);
+                document.location.href= '/';
             }
         }
     }
@@ -63,6 +61,14 @@ export default class {
         if(!this.hero || this.del) {
             this.mainBLock.append(this.searchResult);
             this.hero = this.baseComponent.wrapCreate(this._templateHero()).querySelector('.article-header');
+
+            this.header.isLoggedIn().then((res) => {
+                this.hero.querySelector('.article-header-title__name').textContent = res.name;
+            })
+            .catch(() => {
+                document.location.href= '/';
+            });
+
             this.hero.querySelector('.article-header-title__count').textContent = this.articles.length;
             this.hero.querySelector('.article-header-description').innerHTML = this._keywordTitle();
         }
@@ -102,7 +108,7 @@ export default class {
 
         const keyworsTitle = `По ключевым словам: ${articleKeywordsArray.join(' ')}`;
 
-        if(articleKeywordsArray.length > 1) {
+        if(articleKeywordsArray.length > 1 && (articleKeywords.length - 2) > 0) {
             keyworsCount = ` и <strong>${articleKeywords.length - 2}-м другим</strong>`;
             return keyworsTitle + keyworsCount;
         } else {
@@ -142,6 +148,7 @@ export default class {
         } else {
             event.preventDefault();
             const inputText = this.searchForm.querySelector('.header-search__input');
+            this.textQuery = inputText.value;
 
             this.counter = 0;
             this.pageCount = 3;
@@ -224,7 +231,7 @@ export default class {
     _templateHero = () => {
         return `<div class="article-header container">
             <p class="article-header-save">Сохранённые статьи</p>
-            <h1 class="article-header-title">Грета, у вас <span class="article-header-title__count">5</span> сохранённых статей</h1>
+            <h1 class="article-header-title"><span class="article-header-title__name"></span>, у вас <span class="article-header-title__count">5</span> сохранённых статей</h1>
             <p class="article-header-description"></p>
         </div>`;
     }
@@ -235,7 +242,6 @@ export default class {
 
         this.articleCart.prepend(this.newsCard.renderIcon(this.savePage));
         this.btnFavourites = this.articleCart.querySelector('.button-mark');
-
 
             this.btnFavourites.addEventListener('click', (event) => {
                 let target = event.target;
@@ -255,6 +261,11 @@ export default class {
 
         if (this.savePage) {
             this.articleCart.dataset.id = article._id;
+
+            if(this.savePage) {
+                this.articleCart.insertAdjacentHTML('afterbegin', `<div class="search-result-cart__catid">${article.keyword}</div>`);
+            }
+
             this.articleCart.querySelector('.search-result-cart__name').textContent = article.title;
             this.articleCart.querySelector('.search-result-cart__name').setAttribute('href', article.link);
             this.articleCart.querySelector('.search-result-cart__preview').textContent = article.text;
@@ -302,7 +313,7 @@ export default class {
 
     _addArticle = (card, data) => {
         const dataBD = {
-            "keyword": data.title.split(' ')[0],
+            "keyword": this.textQuery,
             "title": data.title,
             "text": data.description,
             "date": this.baseComponent.dateFormat(data.publishedAt),

@@ -9,11 +9,7 @@ export default class {
 
     getArticles = q => {
         return fetch(`${this.urlServerRest}/newsapi/${q}`, {
-            method: 'GET',
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-            }
+            method: 'GET'
         })
             .then(res => this._getResponseData(res))
             .catch(err => this._getResponseError(err));

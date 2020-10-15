@@ -1,6 +1,6 @@
 export default class {
 
-    constructor({ wrapBtnLogin, baseComponent, body, headerTheme, popup, mainApi, articlePage }) {
+    constructor({ wrapBtnLogin, baseComponent, body, headerTheme, popup, mainApi, articlePage, menuTop }) {
         this.wrapBtnLogin = wrapBtnLogin;
         this.baseComponent = baseComponent;
         this.body = body;
@@ -8,6 +8,13 @@ export default class {
         this.popup = popup;
         this.mainApi = mainApi;
         this.articlePage = articlePage;
+        this.menuTop = menuTop;
+
+        this._init();
+    }
+
+    _init = () => {
+        this._addMenuItemInMenu();
     }
 
     isLoggedIn = () => this.mainApi.getUserData(localStorage.getItem('token'));
@@ -68,5 +75,23 @@ export default class {
                 <use xlink:href="#logout"></use>
             </svg>
         </button>`;
+    }
+
+    _addMenuItemInMenu = () => {
+        if (localStorage.getItem('token')) {
+            this.isLoggedIn().then((res) => {
+                const itemSavePage = this.baseComponent.wrapCreate(this._templateSAvePageMenuItem()).querySelector('.menu__item');
+                this.menuTop.append(itemSavePage);
+            })
+            .catch(() => {
+                console.log();
+            });
+        }
+    }
+
+    _templateSAvePageMenuItem = () => {
+        return `<li class="menu__item">
+                <a href="/saved_news.html" class="menu__link">Сохранённые статьи</a>
+              </li>`;
     }
 }

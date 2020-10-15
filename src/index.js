@@ -39,7 +39,8 @@ import NewsCard from "./js/components/NewsCard";
         headerTheme: constCommon.HEADER_THEME,
         popup: popup,
         mainApi: mainApi,
-        articlePage: constCommon.ARTICLE_PAGE
+        articlePage: constCommon.ARTICLE_PAGE,
+        menuTop: constCommon.MENU_TOP
     });
 
     const newsCard = new NewsCard({ baseComponent });
